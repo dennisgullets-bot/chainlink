@@ -323,14 +323,40 @@
         .rewards-image-block {
           max-width: 100%;
           padding-right: 0;
-          /* Ensures the scaled image content is cropped */
           overflow: hidden;
         }
+        .rewards-section {
+          flex-direction: column-reverse;
+          height: auto;
+        }
 
+        .rewards-image-block {
+          width: 100%;
+          height: auto;
+          padding-right: 0;
+        }
+
+        .rewards-text-block {
+          max-width: 100%;
+        }
+        .rewards-section {
+          gap: 0;
+        }
+
+        .rewards-text-block {
+          padding: 3rem 1.2rem;
+        }
+        .rewards-text-block h1 {
+          font-size: 1.7rem;
+        }
         .rewards-image-block img {
           /* ✅ FIX 2: Use the intended scale (200% / scale 2) */
+          /* transform: scale(2); */
+          object-fit: cover;
           transform: scale(2);
           object-fit: cover;
+          object-position: -50px 10px;
+          /* object-position: 1200% 10%; */
         }
 
         /* Sidebar is hidden by default and full-width when expanded */
@@ -356,23 +382,6 @@
           padding-top: var(--header-height);
         }
 
-        .rewards-section {
-          flex-direction: column-reverse;
-        }
-
-        .rewards-text-block,
-        .rewards-image-block {
-          max-width: 100%;
-          padding-right: 0;
-        }
-
-        .rewards-section {
-          gap: 0;
-        }
-
-        .rewards-text-block {
-          padding: 3rem 1.2rem;
-        }
         .mobile-header {
           font-size: 1.4rem;
         }
@@ -685,7 +694,7 @@
       <main class="main-content">
         <section class="rewards-section">
           <div class="rewards-text-block">
-            <h1>Welcome to <br />Chainlink Rewards</h1>
+            <h1>Welcome to Chainlink Rewards</h1>
             <p class="lead">
               Chainlink Rewards is a community engagement and rewards program
               designed to incentivize active participation in the Chainlink
