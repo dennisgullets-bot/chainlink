@@ -323,10 +323,6 @@
         .rewards-image-block {
           max-width: 100%;
           padding-right: 0;
-
-          /* ✅ FIX 1: Use a safe, constrained height (50vw is 50% of screen width) */
-          height: 50vw;
-
           /* Ensures the scaled image content is cropped */
           overflow: hidden;
         }
@@ -362,7 +358,6 @@
 
         .rewards-section {
           flex-direction: column-reverse;
-          height: auto;
         }
 
         .rewards-text-block,
